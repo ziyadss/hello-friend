@@ -11,10 +11,5 @@
     "chrome_url_overrides": {
         "newtab": "index.html"
     },
-    "manifest_version": 2,
-    "applications": {
-        "gecko": {
-            "id": "ext@xyz.jaywick.hello-friend"
-        }
-    }
+    "manifest_version": 2
 }
