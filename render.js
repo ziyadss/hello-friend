@@ -40,6 +40,4 @@ const render = (columns) => {
                 </div>`;
         })
         .join("");
-
-    document.getElementById("welcome").innerHTML = options.TITLE;
 };
