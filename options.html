@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>hello, friend - options</title>
+        <script src="options.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>
+            body {
+                background-color: black;
+                color: white;
+                margin: 0;
+                font-family: monospace;
+                font-size: 14px;
+                line-height: 1.2rem;
+                margin: auto auto;
+                cursor: default;
+                overflow: hidden;
+                transition: 0.2s background-color;
+            }
+
+            h1 {
+                color: rgb(66, 66, 66);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            #container {
+                display: grid;
+                align-self: center;
+                justify-content: center;
+                justify-items: center;
+                justify-self: center;
+                grid-gap: 1.5rem;
+                height: auto;
+            }
+
+            #button-container {
+                display: flex;
+                flex-direction: row;
+                grid-gap: 1rem;
+
+                /* make buttons inside it right-aligned */
+                justify-content: flex-end;
+                width: 100%;
+                height: 100%;
+            }
+
+            button {
+                background-color: rgb(66, 66, 66);
+                color: white;
+                margin: 0;
+                font-family: monospace;
+                font-size: 14px;
+                line-height: 1.2rem;
+                cursor: pointer;
+                transition: 0.2s background-color;
+
+                border: none;
+                padding: 0.2rem;
+                border-radius: 0.5rem;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1 id="welcome"></h1>
+        <form id="container">
+            <div>
+                <label for="title">title</label>
+                <input type="text" id="title" />
+            </div>
+            <div>
+                <label for="root_folder">root folder</label>
+                <input type="text" id="root_folder" />
+            </div>
+            <div>
+                <label for="title_color">title color</label>
+                <input type="color" id="title_color" />
+            </div>
+            <div>
+                <label for="background">background</label>
+                <input type="color" id="background" />
+            </div>
+            <div>
+                <label for="separators">separators</label>
+                <input type="text" id="separators" />
+            </div>
+            <div>
+                <label for="color_theme">color theme</label>
+                <input type="text" id="color_theme" />
+            </div>
+            <div>
+                <label for="max_name_length">max name length</label>
+                <input type="number" min="2" id="max_name_length" />
+            </div>
+            <div id="button-container">
+                <button id="save" type="button">save</button>
+                <button id="defaults" type="button">restore defaults</button>
+            </div>
+        </form>
+    </body>
+</html>
