@@ -25,10 +25,7 @@ function save() {
     TITLE_COLOR: document.getElementById('title_color').value,
     BACKGROUND: document.getElementById('background').value,
     SEPARATORS: document.getElementById('separators').value.split(','),
-    COLOR_THEME: document
-      .getElementById('color_theme')
-      .value.split(',')
-      .filter((color) => color),
+    COLOR_THEME: document.getElementById('color_theme').value.split(',').filter((color) => color),
     MAX_NAME_LENGTH: parseInt(document.getElementById('max_name_length').value),
   };
 
@@ -36,11 +33,11 @@ function save() {
   if (validate(new_options)) {
     chrome.storage.sync.set(new_options, () => {
       restore();
-      status.textContent = 'Options saved.';
+      status.textContent = 'options saved.';
       setTimeout(() => (status.textContent = ''), 750);
     });
   } else {
-    status.textContent = 'Invalid options.';
+    status.textContent = 'invalid options.';
     setTimeout(() => (status.textContent = ''), 750);
   }
 }
@@ -68,7 +65,7 @@ function loaded() {
     chrome.storage.sync.set(options, () => {
       restore();
       const status = document.getElementById('status');
-      status.textContent = 'Defaults restored.';
+      status.textContent = 'defaults restored.';
       setTimeout(() => (status.textContent = ''), 750);
     })
   );
