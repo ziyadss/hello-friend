@@ -1,4 +1,4 @@
-const render = (columns) => {
+const render = (columns, options) => {
     const colors = options.COLOR_THEME;
     const root = document.getElementById("container");
 

@@ -1,6 +1,8 @@
+function script_main(options) {
 const columns = [];
 
 chrome.bookmarks.getTree((items) => {
+    options.ROOT_FOLDER = new RegExp(options.ROOT_FOLDER, 'i');
     const bookmarksBar = items[0].children.find((x) =>
         options.ROOT_FOLDER.test(x.title)
     );
@@ -35,7 +37,7 @@ chrome.bookmarks.getTree((items) => {
         columns.push(column);
     });
 
-    render(columns);
+    render(columns, options);
 });
 
 const visit = (column, node, path = []) => {
@@ -80,3 +82,6 @@ if (window.browser) {
         }
     });
 }
+}
+
+chrome.storage.sync.get(options, script_main);
