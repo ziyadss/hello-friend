@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>hello, friend - options</title>
+    <script src="options.js"></script>
+    <script src="options-page.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="options-body">
+    <h1 id="welcome"></h1>
+    <form id="options-container">
+      <div>
+        <label for="title">title</label>
+        <input type="text" id="title" />
+      </div>
+      <div>
+        <label for="root_folder">root folder</label>
+        <input type="text" id="root_folder" />
+      </div>
+      <div>
+        <label for="title_color">title color</label>
+        <input type="color" id="title_color" />
+      </div>
+      <div>
+        <label for="background">background</label>
+        <input type="color" id="background" />
+      </div>
+      <div>
+        <label for="separators">separators</label>
+        <input type="text" id="separators" />
+      </div>
+      <div>
+        <label for="color_theme">color theme</label>
+        <input type="text" id="color_theme" />
+      </div>
+      <div>
+        <label for="max_name_length">max name length</label>
+        <input type="number" min="2" id="max_name_length" />
+      </div>
+      <div id="button-container">
+        <p id="status"></p>
+        <button id="save" type="button">save</button>
+        <button id="defaults" type="button">restore defaults</button>
+      </div>
+    </form>
+  </body>
+</html>
