@@ -13,8 +13,6 @@ const validate = (options) => {
         return false;
     }
 
-    console.log(options.COLOR_THEME);
-
     return true;
 };
 
