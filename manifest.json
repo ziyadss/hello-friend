@@ -1,24 +1,16 @@
 {
-    "name": "hello, friend",
-    "description": "Dark terminal-esque new tab page with your bookmarks",
-    "permissions": ["bookmarks"],
-    "icons": {
-        "16": "icons/16.png",
-        "48": "icons/48.png",
-        "128": "icons/128.png"
-    },
-    "version": "0.12",
-    "chrome_url_overrides": {
-        "newtab": "index.html"
-    },
-    "manifest_version": 3,
-    "applications": {
-        "gecko": {
-            "id": "ext@xyz.jaywick.hello-friend"
-        }
-    },
-    "options_ui": {
-        "page": "options.html",
-        "open_in_tab": false
-    }
+  "name": "hello, friend",
+  "version": "0.13",
+  "manifest_version": 3,
+  "description": "Dark terminal-esque new tab page with your bookmarks",
+  "permissions": ["bookmarks"],
+  "icons": {
+    "16": "icons/slash16x16.png",
+    "48": "icons/slash48x48.png",
+    "128": "icons/slash128x128.png"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  }
 }
